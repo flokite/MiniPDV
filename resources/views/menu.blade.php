@@ -1,4 +1,8 @@
-<div class="flex flex-col h-screen">
+@extends('layout')
+
+@section('layout')
+
+<div class="flex fixed w-full flex-col h-screen">
     <!-- Top Bar -->
     <div class="navbar bg-base-200 shadow-md">
       <div class="flex-none lg:hidden">
@@ -71,8 +75,10 @@
       </div>
 
       <!-- Main Content -->
-      @yield('content')
-
+      <div class="w-full overflow-auto h-screen pb-20">
+        @yield('content')
+      </div>
+      
     </div>
 </div>
 
@@ -86,3 +92,6 @@
       sidebar.classList.toggle('hidden');
     });
   </script>
+    
+@endsection
+

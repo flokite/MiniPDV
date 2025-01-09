@@ -6,14 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     @vite('resources/vendor/tabler/webfont/tabler-icons.css')
-    <title>Painel</title>
+    <title>@yield('title')</title>
 </head>
 <body>
   
-    @include('menu')
- 
-  
-
+    @yield('layout')
     
     @vite('resources/js/app.js')
 </body>
